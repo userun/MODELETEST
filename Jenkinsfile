@@ -11,6 +11,8 @@ node {
 		} 
 	}
 	stage('transfer') {
-	sh "sshpass -p 'ace' scp -r -p * ace@CNAF:/home/ace/MODELECIBLE/010/"
+		sh "echo \"ace\" > password.txt" 
+		sh "scp -r -p * ace@CNAF:/home/ace/MODELECIBLE/010/ < password.txt"
+		sh "rm password.txt"
 	}
 }
