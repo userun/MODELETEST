@@ -7,7 +7,7 @@ node {
 	stage('scan') {
 		if (isUnix()) {
 			sh "pwd"
-			sh "ll"
+			sh "ls"
 		} 
 	}
 	stage('Results') {
