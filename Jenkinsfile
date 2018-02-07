@@ -12,7 +12,12 @@ node {
 		} 
 	}
 	stage('transfer') {
-		sh 'ssh -o StrictHostKeyChecking=no ace@CNAF rm -r MODELECIBLE/010/*'  
-		sh "scp -r -p * ace@CNAF:MODELECIBLE/010/"
+		publishOverSsh{
+			server('CNAF'){
+				transferSet{
+					sourcefiles(*)
+				}
+			}
+		}
 	}
 }
