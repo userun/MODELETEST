@@ -2,7 +2,7 @@
 
 node {
 	stage('get') {
-		git 'https://github.com/NixLabAdmin/Opencell.git/'
+		git 'https://github.com/userun/MODELETEST.git'
 	}
 	stage('scan') {
 		if (isUnix()) {
@@ -11,6 +11,6 @@ node {
 		} 
 	}
 	stage('Results') {
-	sh "println(\"blablabla\")"
+	sh "echo \"blablabla\""
 	}
 }
