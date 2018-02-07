@@ -12,7 +12,7 @@ node {
 		} 
 	}
 	stage('transfer') {
-		sh 'ssh ace@CNAF rm -r MODELECIBLE/010/*'  
+		sh 'ssh -o StrictHostKeyChecking=no ace@CNAF rm -r MODELECIBLE/010/*'  
 		sh "scp -r -p * ace@CNAF:MODELECIBLE/010/"
 	}
 }
