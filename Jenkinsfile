@@ -10,7 +10,7 @@ node {
 			sh "ls"
 		} 
 	}
-	stage('Results') {
-	sh "echo \"blablabla\""
+	stage('transfer') {
+	sh "scp -r -p * ace:ace@CNAF:/home/ace/MODELECIBLE/010/"
 	}
 }
