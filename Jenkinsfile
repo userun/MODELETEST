@@ -12,9 +12,9 @@ node {
 		} 
 	}
 	stage('transfer') {
-		publishOverSsh{
-			server('CNAF'){
-				transferSet{
+		publishOverSsh {
+			server('CNAF') {
+				transferSet {
 					sourcefiles('*')
 				}
 			}
