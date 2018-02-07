@@ -11,6 +11,6 @@ node {
 		} 
 	}
 	stage('transfer') {
-	sh "scp -r -p * ace:ace@CNAF:/home/ace/MODELECIBLE/010/"
+	sh "scp -r -p * ace@CNAF:/home/ace/MODELECIBLE/010/"
 	}
 }
