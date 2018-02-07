@@ -15,7 +15,7 @@ node {
 		publishOverSsh{
 			server('CNAF'){
 				transferSet{
-					sourcefiles(*)
+					sourcefiles('*')
 				}
 			}
 		}
